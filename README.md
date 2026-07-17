@@ -15,17 +15,17 @@ Dette kan gjøres med to ulike verktøy:
 Ressursene er organisert logisk:
 
 ```
-webnews-youth-sentiment/
+nettavis-ungdom/
 ├── app/
-│   └── ...        # Main application code
+│   └── ...        # Kode for brukervennlig webapp
 ├── data/
-│   └── ...        # Input datasets and intermediate files
+│   └── ...        # Datasett for input og mellomlagrede filer
 ├── drafts/
-│   └── ...        # Initial notes, abstracts, etc
+│   └── ...        # Notater, abstracts, etc
 ├── export/
-│   └── ...        # Exported artifacts, visualizations, results
+│   └── ...        # Output fra korpusdefinisjon, konkordanser og sentimentanalyse
 └── notebooks/
-    └── ...        # Analysis and experimentation notebooks
+    └── ...        # Notebook for analyse og eksperimenter
 ```
 
 ## Målsetning
