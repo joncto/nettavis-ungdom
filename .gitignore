@@ -1,5 +1,6 @@
 __pycache__/
 .cache
+.DS_store
 .pytest_cache/
 
 # Jupyter Notebook
