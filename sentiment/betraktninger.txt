@@ -1,0 +1,54 @@
+Status etter klassifisering av første 200 konkordanser:
+
+200 konkordanser (00000–00199) er annotert i 20 batcher à 10 konkordanser:
+
+Fordelingen holder seg stabil på tvers av batchene — ingen tydelig drift:
+
+	negativ	positiv	nøytral	ikke rel.	uklart
+000–049	17	13	15	3	2
+050–099	20	14	12	3	1
+100–149	15	14	15	4	2
+150–199	15	18	15	1	1
+
+Totalt:
+negativ	33,5%,
+positiv 29,5%,
+nøytral 28,5%,
+ikke relevant 5,5%,
+uklart 3 %
+
+Lablet som ungdomsorg: 8,5 %
+
+Enkelte dubletter, men hovedsakelig fra ulike domenenavn (f.eks.nettavisen. + tv2)
+- f.eks. 00071/00115
+- identiske tekster ser ut til å få samme klassifisering, så modellen er iallfall konsistent på dem.
+
+Grensetilfeller verdt en manuell titt før full kjøring:
+
+Ungdomsorg-verv som ren CV-opplysning (00089 FPU, 00130 Europeisk Ungdom, 00134 Rød Ungdom) — satt til nøytral, mens 00183 (NU-medlem som møter opp på heradsmøte) ble positiv fordi det beskrives en handling. Prompten sier ikke hvor grensen går.
+
+Hjelpetiltak uten navngitt problem (00095 behandlingssystem, 00141 psykologisk førstehjelp, 00170 MST) — satt til nøytral etter velferdsstats-regelen, mens 00060 og 00135 ble negativ fordi vansken er eksplisitt. Verdt å sjekke om vi er enige i den grensen.
+
+00150 (BUP-debatt i et programoppslag) — nøytral, siden "ingen påstand framsettes", i motsetning til 00052 som betraktes som negative fakta.
+
+00117 («rodde fiske i åpen båt i en årrekke som ungdom») — satt til ikke relevant, men ligger nær 00137-unntaket om substansielle hendelser i ungdomstida.
+
+00191 («kan ikke overlate til ungdommen å sette grensene») — nøytral, men kan ha en mild "kompetanse-negativ" undertone.
+
+
+
+
+Gjenopptakelsesprompt:
+
+Les STATUS.md og trinnplanen i prompt_sentimentanalyse_ungdom.md før du gjør noe annet. Trinn 4 er ferdig. Jeg har nå gått gjennom sentiment-ungdom-trinn4-validering.xlsx sammen med en kollega, og fylt ut kolonnene manuell_sentiment og kommentar der vi er uenige med modellen.
+
+Vi skal gjøre trinn 5 i dag — kontrollrunden på 00200–00399. Gjør det slik:
+
+Les inn regnearket og rapporter hvor mange rader som har manuell vurdering, hvilke kategorier uenighetene går mellom, og om de klumper seg rundt bestemte mønstre (ungdomsorg, «ungdommelig», hjelpetiltak, avkuttede vinduer).
+Gå gjennom de åtte åpne kodespørsmålene i STATUS.md i lys av vurderingene våre, og foreslå konkrete endringer i prompt_sentimentanalyse_ungdom.md — nye eksempler med reell conc_id fra utvalget, ikke oppdiktede. Legg fram forslagene som en liste jeg kan si ja eller nei til punkt for punkt.
+Vent på min godkjenning før du endrer prompten.
+Når prompten er oppdatert: annotér 00200–00399 i batcher à ti med den reviderte prompten. Kjør så valider_output.py, sammenstill_output.py og eksporter_xlsx.py som før, og legg resultatet i sentiment-ungdom-trinn5*.
+Sammenlign med trinn 4: er fordelingen stabil, er de tidligere grensetilfellene nå kodet i tråd med det vi ble enige om, og har det dukket opp nye mønstre prompten ikke dekker? Løft fram alt du er i tvil om, i stedet for å velge selv.
+Oppdater STATUS.md med resultatet av trinn 5 og eventuelle nye åpne spørsmål.
+
+Ikke start trinn 6 — full kjøring av korpuset — før kontrollrunden er gjennomgått og jeg har sagt fra.
