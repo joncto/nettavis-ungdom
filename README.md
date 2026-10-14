@@ -1,3 +1,5 @@
+[![Open in molab](https://molab.marimo.io/molab-shield.svg)](https://molab.marimo.io/notebooks/nb_SKvjqFZBJr7tYf7qSDf6xG)
+
 # Omtale av ungdom i norske nettaviser (2019-22)
 
 Dette repoet inneholder kode som benytter Nasjonalbibliotekets DH-lab API for å:
@@ -9,6 +11,8 @@ Dette repoet inneholder kode som benytter Nasjonalbibliotekets DH-lab API for å
 Dette kan gjøres med to ulike verktøy:
 - notebooks (brukeren kan redigere koden direkte)
 - webapp (grafisk grensesnitt uten koderedigering)
+
+Tentativ notebook er tilgjengelig i [Marimo molab](https://molab.marimo.io/notebooks/nb_SKvjqFZBJr7tYf7qSDf6xG)
 
 ## Struktur
 
