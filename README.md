@@ -54,5 +54,5 @@ Språkmodellen returnerer deretter en tabell med klassifisering ("positiv", "nø
 
 ### Referanser
 [^1]: Se f.eks. Seland & Hyggen (2022): "The digital generation: Representations of a generational digital divide". In *Generational Tensions and Solidarity Within Advanced Welfare States* (1st ed., Vol. 1, pp. 133–152). Routledge. [DOI:10.4324/9781003129592-11](https://doi.org/10.4324/9781003129592-11)
-[^2]: Nasjonalbiblioteket (2026): *DH-lab*. [https://www.nb.no/dh-lab/digital-tekstanalyse/](https://www.nb.no/dh-lab/digital-tekstanalyse/)
+[^2]: Nasjonalbiblioteket (2026): *DH-lab programmering*. [https://www.nb.no/dh-lab/digital-tekstanalyse/](https://www.nb.no/dh-lab/digital-tekstanalyse/)
 [^3]: Armaselu & Fickers (2024): *Zoomland*. [DOI:10.1515/9783111317779](https://doi.org/10.1515/9783111317779)
