@@ -22,10 +22,10 @@ def _():
 
 
 @app.cell
-def _(DATA_DIR):
+def _():
     SENTIMENT_FIL = "../../export/nettavis-ungdom-sentiment-opus5_5.xlsx"
     MEDIER_FIL = "klassifisering_av_medier_PIS.xlsx"
-    KORPUS_FIL = DATA_DIR / "../../export/korpus-nettavis-ungdom_OR_ungdomm_-nob_OR_nno-limit_100000.xlsx"
+    KORPUS_FIL = "../../export/korpus-nettavis-ungdom_OR_ungdomm_-nob_OR_nno-limit_100000.xlsx"
 
     REKKEVIDDE_REKKEFOLGE = ["Nasjonal", "Regional", "Lokal"]
     SENTIMENT_REKKEFOLGE = ["positiv", "nøytral", "negativ", "uklart", "ikke relevant"]
