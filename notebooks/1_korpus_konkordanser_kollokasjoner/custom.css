@@ -1,0 +1,67 @@
+/* --- Profilfonter fra www.nb.no --- */
+@font-face {
+  font-family: ClearfaceStd;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('https://www.nb.no/content/themes/theme-block-base/assets/fonts/ClearfaceStd-Regular.woff2')
+       format('woff2');
+}
+
+@font-face {
+  font-family: Gerhard;
+  font-style: normal;
+  font-weight: 500; /* Medium */
+  font-display: swap;
+  src: url('https://www.nb.no/content/themes/theme-block-base/assets/fonts/STKGerhard-Medium.woff2')
+       format('woff2');
+}
+
+@font-face {
+  font-family: "Bureau Sans";
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: fallback;
+  src: url('https://www.nb.no/content/themes/theme-block-base/assets/fonts/STKBureauSansVariableComplete.woff2')
+       format('woff2');
+}
+
+/* --- Profilfarger --- */
+:root {
+  --profile: #550029;
+  --muted: #333;
+}
+
+/* Scoped to marimo's rendered markdown so the editor UI is untouched */
+.markdown h1 {
+  font-family: ClearfaceStd, serif;
+  font-size: 3.0rem;
+  font-weight: 400;
+  margin: 0 0 10px;
+  color: var(--profile);
+}
+
+.markdown h2 {
+  font-family: ClearfaceStd, serif;
+  font-size: 2.0rem;
+  font-weight: 500;
+  margin: 15px 0 15px;
+  color: var(--profile);
+}
+
+.markdown h3 {
+  font-family: "Bureau Sans", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin: 0 0 50px 50px;
+  color: var(--profile);
+}
+
+.markdown p {
+  font-family: "Bureau Sans", sans-serif;
+  font-size: 1.05rem;
+  font-weight: 300;
+  line-height: 1.5;
+  color: var(--muted);
+  margin: 0 0 0.5rem;
+}
