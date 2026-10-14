@@ -17,7 +17,6 @@ Ressursene er organisert logisk:
 
 ```
 nettavis-ungdom/
-
 ├── export/
 │   └── ...        # Output fra korpusdefinisjon, konkordanser og sentimentanalyse
 └── notebooks/     # Notebook for analyse og eksperimenter
@@ -31,9 +30,9 @@ nettavis-ungdom/
 
 ## Målsetning
 
-Innen feltet ungdomsstudier hevdes det ofte at ungdom portretteres negativt i media.[^1] Samtidig har tester med en leksikon-basert sentimentanalyse av tekster fra norske nettaviser indikert et mer nyansert landskap av medienarrativer: ungdom ble stadig framstilt i et mer positivt lys enn forventet, noe som utfordrer en etablert antakelse om hvordan media framstiller ungdom.
+Innen feltet ungdomsstudier hevdes det ofte at ungdom portretteres negativt i media.[^1] Samtidig har tidligere tester med en leksikon-basert sentimentanalyse av tekster fra norske nettaviser indikert et mer nyansert landskap av medienarrativer: ungdom ble stadig framstilt i et mer positivt lys enn forventet, noe som utfordrer en etablert antakelse om hvordan media framstiller ungdom.
 
-Leksikon-basert sentimentanalyse har noen kjente svakheter, siden de ikke gir mulighet for kontekst-spesifikke nyanser. For å utføre en mer nøyaktig klassifisering av hvordan "ungdom" har blitt portrettert benytter denne studien seg av store språkmodeller for sentimentklassifikasjon. Kvaliteten av resultatene vurderes deretter av menneskelige forskere, med mål om å gjøre en "skalerbar lesing"[^2] av resultatene, innenfor rammene av "computational hermeneutics".[^3]
+Ved å analysere en samling av tekst publisert av norske nettaviser, tilgjengeliggjort gjennom Nasjonalbibliotekets (NB) DH-lab [^2], ønsker dette prosjektet å måle hvilken andel av disse tekstene som omtaler ungdom enten positivt, negativt eller nøytralt. Målet er å gjøre en skalerbar lesing som kombinerer fjernlesing og maskinell klassifikasjon med nærlesing av et utvalg data, både for kvalitetssikring og hjelp til tolkning av store datamengder, det vil si en form for "computational hermeneutics".[^3]
 
 ## Metodikk
 
@@ -49,3 +48,11 @@ DH-lab API tillater å hente konkordanser, noe som gir en liste med tekstvinduer
 ## Klassifisere sentiment med store språkmodeller
 Konkordansene gis som input til en generative stor språkmodeller, sammen med insturksjoner for hvordan den skal klassifisere sentimentet for nøkkelordet.
 Språkmodellen returnerer deretter en tabell med klassifisering ("positiv", "nøytral", "negativ") av hver enkelt konkordanse, samt en confidence score som indikerer hvor sikker språkmodellen er på sin klassifisering.
+
+
+
+
+### Referanser
+[^1]: Se f.eks. Seland & Hyggen (2022): "The digital generation: Representations of a generational digital divide". In *Generational Tensions and Solidarity Within Advanced Welfare States* (1st ed., Vol. 1, pp. 133–152). Routledge. [DOI:10.4324/9781003129592-11](https://doi.org/10.4324/9781003129592-11)
+[^2]: Nasjonalbiblioteket (2026): *DH-lab*. [https://www.nb.no/dh-lab/digital-tekstanalyse/](https://www.nb.no/dh-lab/digital-tekstanalyse/)
+[^3]: Armaselu & Fickers (2024): *Zoomland*. [DOI:10.1515/9783111317779](https://doi.org/10.1515/9783111317779)
