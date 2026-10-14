@@ -6,13 +6,10 @@ Dette repoet inneholder kode som benytter Nasjonalbibliotekets DH-lab API for å
 - definere korpus,
 - hente konkordanser (lister med nøkkelord i kontekst)
 - beregne relativt frekvente kollokater (assosierte ord)
-- klassifisere sentiment for nøkkelord med bruk av store språkmodeller (LLM)
 
-Dette kan gjøres med to ulike verktøy:
-- notebooks (brukeren kan redigere koden direkte)
-- webapp (grafisk grensesnitt uten koderedigering)
-
-Tentativ notebook er tilgjengelig i [Marimo molab](https://molab.marimo.io/notebooks/nb_SKvjqFZBJr7tYf7qSDf6xG)
+Repoet har også kode for å:
+- klassifisere sentiment for nøkkelord med bruk av store språkmodeller (Anthropic Opus 5.5)
+- beregne og visualisere resultaterfor sentimentklassifisering
 
 ## Struktur
 
@@ -20,16 +17,16 @@ Ressursene er organisert logisk:
 
 ```
 nettavis-ungdom/
-├── app/
-│   └── ...        # Kode for brukervennlig webapp
-├── data/
-│   └── ...        # Datasett for input og mellomlagrede filer
-├── drafts/
-│   └── ...        # Notater, abstracts, etc
+
 ├── export/
 │   └── ...        # Output fra korpusdefinisjon, konkordanser og sentimentanalyse
-└── notebooks/
-    └── ...        # Notebook for analyse og eksperimenter
+└── notebooks/     # Notebook for analyse og eksperimenter
+    └── 1_korpus_konkordanser_kollokasjoner
+        └── ...        
+    └── 2_sentimentklassifisering
+        └── ...        
+└── sentiment-opus5_5/
+    └── ...        # Script for prompting av Opus 5.5 for sentimentanalyse
 ```
 
 ## Målsetning
@@ -49,6 +46,6 @@ Mange dokumenter har blitt arkivert fra samme URI, og framstår som nesten-dupli
 ### Henting av konkordanser
 DH-lab API tillater å hente konkordanser, noe som gir en liste med tekstvinduer for nøkkelordet "ungdom" og dets umiddelbare kontekst (opptil 12 ord før og etter).
 
-## Kliassifisere sentiment med store språkmodeller
+## Klassifisere sentiment med store språkmodeller
 Konkordansene gis som input til en generative stor språkmodeller, sammen med insturksjoner for hvordan den skal klassifisere sentimentet for nøkkelordet.
 Språkmodellen returnerer deretter en tabell med klassifisering ("positiv", "nøytral", "negativ") av hver enkelt konkordanse, samt en confidence score som indikerer hvor sikker språkmodellen er på sin klassifisering.
